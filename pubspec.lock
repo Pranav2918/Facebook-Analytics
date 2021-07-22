@@ -50,13 +50,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  facebook_analytics:
-    dependency: "direct main"
-    description:
-      name: facebook_analytics
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4"
   facebook_app_events:
     dependency: "direct main"
     description:

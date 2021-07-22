@@ -1,9 +1,7 @@
-import 'package:facebook_analytics/facebook_analytics.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/material.dart';
 
 class FacebookAnalyticsApp extends StatelessWidget {
-  final facebookAnalytics = FacebookAnalytics();
   static final facebookAppEvents = FacebookAppEvents();
   @override
   Widget build(BuildContext context) {
@@ -26,14 +24,21 @@ class FacebookAnalyticsApp extends StatelessWidget {
             child: RaisedButton(
                 child: Text('Test'),
                 onPressed: () {
-                  facebookAnalytics.logEvent(name: 'Button Clicked');
+                  facebookAppEvents.logEvent(name: 'Event 1 tapped');
                 }),
           ),
           Center(
             child: RaisedButton(
                 child: Text('Test2'),
                 onPressed: () {
-                  facebookAnalytics.logEvent(name: 'Tapped');
+                  facebookAppEvents.logEvent(name: 'Event 2 tapped');
+                }),
+          ),
+          Center(
+            child: RaisedButton(
+                child: Text('Test3'),
+                onPressed: () {
+                  facebookAppEvents.logEvent(name: 'Without Analytics');
                 }),
           ),
         ],
